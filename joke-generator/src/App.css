@@ -1,0 +1,88 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: rgb(205, 147, 0);
+  display: flex;
+}
+.card{
+  margin: auto;
+  height: auto;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 10px 25px rgb(97, 63, 0);
+  background: rgb(2, 51, 94);
+  word-wrap: break-word;
+  position: relative;
+  top: -20px;
+}
+span{
+  font-size: 50px;
+  display: inline-block;
+  transition: 1s;
+  animation: rotateAnimation 3s linear infinite;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(-20deg); 
+  }
+  50% {
+    transform: rotate(20deg); 
+  }
+  100% {
+    transform: rotate(-20deg); 
+  }
+}
+.joke{
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 10px;
+  line-height: 1.5;
+  min-height: 110px;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+button{
+  background-color: rgb(205, 147, 0);
+  color: rgb(2, 51, 94);
+  border: none;
+  padding: 8px 15px;
+  margin: 7px 0;
+  font-size: 15px;
+  font-weight: bolder;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  word-wrap: break-word;
+}
+button:hover{
+  color: rgb(0, 34, 64);
+  background-color: rgb(221, 158, 0);
+  transform: translateY(2px);
+}
+footer{
+  background-color: rgb(0, 34, 64);
+  color: whitesmoke;
+  padding: 5px 0 10px 0;
+}
+
+/* responsive */
+@media screen and (max-width: 680px) {
+  .card {
+    width: 75%;
+    min-width: 200px;
+  }
+}
